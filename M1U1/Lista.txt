@@ -3,3 +3,5 @@ Fruta
 Verdura
 Pan
 Carne
+Huevos
+Harina
