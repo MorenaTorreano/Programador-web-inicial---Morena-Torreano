@@ -4,4 +4,3 @@ Verdura
 Pan
 Carne
 Huevos
-Harina
