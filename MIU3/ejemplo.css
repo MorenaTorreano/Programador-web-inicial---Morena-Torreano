@@ -1,0 +1,47 @@
+h1{
+    color: rosybrown;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-style: italic;
+    
+}
+
+h2{
+    color: blueviolet;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify
+
+}
+
+p{
+    line-height: 20px;
+
+}
+
+.destacado{
+    font-weight: bold;
+width: 400px
+}
+
+.contenedor{
+	background-color: rgb(235, 167, 220);
+	display: flex;
+	/*justify-content: flex-start;*/
+	/*justify-content: flex-end;*/
+	/*justify-content: center;*/
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
+	/* justify-content: space-evenly; */
+}
+
+.item{
+	background-color: #fffefe;
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	font-size: 30px;
+    margin:5px;
+}
+
