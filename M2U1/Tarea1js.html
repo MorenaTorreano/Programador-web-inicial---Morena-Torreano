@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="Tarea1.css">
+	
+  <title></title>
+	
+    </head>
+<body>
+<h1>Cambia el fondo con un click</h1>
+
+<div id="button-group">
+  <button value="red">Red</button>
+  <button value="blue">Blue</button>
+  <button value="green">Green</button>
+</div>
+
+<script>
+  const buttonGroup = document.getElementById("button-group");
+
+const buttonGroupPressed = (e) => {
+  const isButton = e.target.nodeName === 'BUTTON';
+  if(!isButton) {
+     return
+   }
+  document.body.style.backgroundColor = e.target.value;
+  e.target.style.backgroundColor =  e.target.value;
+  
+}
+
+buttonGroup.addEventListener('click', buttonGroupPressed);
+</script>
+
+</body>
+</html>
