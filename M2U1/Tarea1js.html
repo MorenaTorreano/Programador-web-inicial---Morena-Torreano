@@ -11,26 +11,16 @@
 <body>
 <h1>Cambia el fondo con un click</h1>
 
-<div id="button-group">
-  <button value="red">Red</button>
-  <button value="blue">Blue</button>
-  <button value="green">Green</button>
+<div class="contenedor">
+ <div class="cuadrado rojo" onclick="cambiarcolor ('red')"></div>
+ <div class="cuadrado verde" onclick="cambiarcolor ('green')"></div>
+ <div class="cuadrado azul" onclick="cambiarcolor ('blue')"></div>
 </div>
 
 <script>
-  const buttonGroup = document.getElementById("button-group");
-
-const buttonGroupPressed = (e) => {
-  const isButton = e.target.nodeName === 'BUTTON';
-  if(!isButton) {
-     return
-   }
-  document.body.style.backgroundColor = e.target.value;
-  e.target.style.backgroundColor =  e.target.value;
-  
-}
-
-buttonGroup.addEventListener('click', buttonGroupPressed);
+  function cambiarcolor(color) {
+    document.querySelector('body').style.background = color;
+  }
 </script>
 
 </body>
