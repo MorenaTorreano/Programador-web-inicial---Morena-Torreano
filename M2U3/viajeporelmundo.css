@@ -1,0 +1,51 @@
+/* font-family: 'Libre Baskerville', serif; */
+
+h1{
+font-family: 'Libre Baskerville', serif;
+color: black;
+background-color: white;
+ }
+
+ h2{
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+     }
+
+.destacado{
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    background-color: white;
+     }
+
+.hero{
+    background: url(Imagen\ fondo.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 600px;
+    color: white;
+     }
+
+
+.lista-novedades{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family:'Libre Baskerville', serif;
+         }
+
+
+.lista-novedades li {
+        margin: 4px 0; 
+         }
+
+   
+    .testimonios{
+        background-color: rgb(239, 68, 125);
+        padding-bottom: 2rem !important;
+    } 
+
+    .testimonio{
+        text-align: center;
+        padding: 50px 30px;
+        font-family: 'Libre Baskerville', serif; 
+    } 
