@@ -26,10 +26,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="#nosotros">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#conocenos">Contacto</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +50,7 @@
 
 
 <div class="container-fluid">
-  <div id="home" class="row align-items-center hero">
+  <div id="home" class="row align-items-center hero scroll_section">
   <div class="col-lg-3 offset-lg-2">
     <h1>¡Viajando por el mundo!</h1>
     <p class="destacado">Vivi la aventura de tu vida como vos quieras</p>
@@ -77,7 +77,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>ejemplo y texto</p>
+          <p>España es un pais que tiene...</p>
         </div>
       </div>
     </div>
@@ -119,8 +119,96 @@
   </div>
 </div>
 
+<div id="Historia" class="row align-items-center py-4">
+<div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+  <img src="coliseo.jpg" class="img-fluid">
+</div>
+<div class="col-lg-2 col-md-3 d-none d-sm-block">
+  <img src="imagen historia.jpg" class="img-fluid">
+</div>
+<div class="col-12 d-sm-none">
+  <img src="renacimiento.webp" class="img-fluid">
+</div>
+<div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+  <h2 class="destacado2">Historia</h2>
+  <p class="destacado3"> Historia de los paises que fuimos visitando</p>
+</div>
+</div>
+ 
+<div class="nosotros" id="nosotros" scroll_section> Nosotros
+<div class="row row-cols-1 row-cols-md-3 g-4 staff">
+  <div class="col">
+    <div class="card h-100" style="max-width: 18rem;">
+      <img src="nosotros 1.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Jeniffer Lawrence</h5>
+        <p class="card-text">Soy licenciada en turismo...</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" style="max-width: 18rem;">
+      <img src="nosotros 2.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Christian Fernandez</h5>
+        <p class="card-text">Me gusta viajar y quise crear esta pagina con mis colegas...</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" style="max-width: 18rem;">
+      <img src="nosotros 3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Miley Cyrus</h5>
+        <p class="card-text">Soy azafata y ayudo a mis compañeros con fotos/videos...</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+   
 
-  <footer>
+<div id="conocenos" class="row py-4" scroll_section>
+  <div class="col-md-4 offset-md-2">
+    <h2>Visitanos</h2>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2100532417803!2d-58.422305585441705!3d-34.59884956474613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7cd54f107b%3A0x88bd8fe0e0b6e3a6!2sCentro%20de%20e-Learning%20UTN%20BA!5e0!3m2!1ses!2sar!4v1680197823413!5m2!1ses!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="col-md-4 mt-4 mt-sm-0">
+    <h2>Contactanos</h2>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="nombre" class="form-control" id="nombre">
+    </div>
+    <div class="col-md-6">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="apellido">
+    </div>
+    <div class="col-12">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="email@email.com">
+    </div>
+    <div class="col-12">
+      <label for="tel" class="form-label">Telefono</label>
+      <input type="text" class="form-control" id="tel" placeholder="+54...">
+    </div>
+    <div class="col-12">
+      <label for="Mensaje" class="form-label">Mensaje</label>
+      <textarea type="text" class="form-control" id="mensaje" rows="3">
+        </textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</div>
+</div>
+
+
+<footer>
     <p class="text-center"> Diseñado por Morena Torreano</p>
   </footer>
   
