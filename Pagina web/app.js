@@ -26,9 +26,8 @@ app.use(session({
 saveUninitialized: true 
 }));
 
-
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
 app.get('/', function (req, res) {
   var conocido = Boolean(req.session.nombre);
