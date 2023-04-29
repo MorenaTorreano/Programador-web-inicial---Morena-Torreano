@@ -16,11 +16,10 @@ router.post('/', async (req, res, next) => {
   var mensaje = req.body.mensaje;
 
   var obj = {
-    to: 'more.torreano@hotmail.com'
-    ,subject: 'Contacto desde la web'
-    ,html: nombre + " " + apellido + "se contacto a traves y quiere mas info a este correo: "
-    + email + ".<br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es " + telefono
-  }
+    to: 'more.torreano@hotmail.com',
+    subject: 'Contacto desde la web',
+    html: nombre + " " + apellido + "se contacto a traves y quiere mas info a este correo: "
+    + email + ".<br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es " + telefono }
 
   var transporter = nodemailer.createTransport( {
 host: process.env.SMTP_HOST,
