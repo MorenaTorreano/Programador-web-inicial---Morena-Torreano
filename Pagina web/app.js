@@ -9,6 +9,8 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var pool = require('./models/bd');
+
 var app = express();
 
 // view engine setup
@@ -25,6 +27,17 @@ app.use(session({
   resave: false,
 saveUninitialized: true 
 }));
+
+
+//pool.query('select * from empleados2').then(function (resultados) {
+//console.log(resultados)
+//});
+
+//var id= 21;
+//pool.query('delete from empleados2 where id_emp=?', [id]).then(function (resultados) {
+ //console.log(resultados)  
+//})
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -67,3 +80,4 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+
