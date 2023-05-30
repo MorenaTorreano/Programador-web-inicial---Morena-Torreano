@@ -6,10 +6,15 @@ var logger = require('morgan');
 var session = require('express-session');
 
 require('dotenv').config();
+var session = require('express-session');
+var pool = require('./models/bd');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
 
-var pool = require('./models/bd');
+
 
 var app = express();
 
@@ -28,6 +33,18 @@ app.use(session({
 saveUninitialized: true 
 }));
 
+secured = async (req, res, next) => { 
+  try {  
+    console.log(req.session.id_usuario);
+    if(req.session.id_usuario) { 
+      next();
+    } else {
+      req.redirect('/admin/login')
+    }
+  } catch (error) { 
+    console.log(error);
+  }
+}
 
 //pool.query('select * from empleados2').then(function (resultados) {
 //console.log(resultados)
@@ -41,6 +58,8 @@ saveUninitialized: true
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', secured, adminRouter);
 
 app.get('/', function (req, res) {
   var conocido = Boolean(req.session.nombre);
