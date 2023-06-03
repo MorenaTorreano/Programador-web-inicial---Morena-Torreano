@@ -1,18 +1,28 @@
-<div class="container" style="margin: 200px 0>
+<div class="container" style="
+    background:  #f6f5f7;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-family: 'Libre Baskerville', serif;
+    width: 50vh;
+	height: 40vh;
+	margin: 200px auto;
+    border-radius: 20px;
+    align-items: center;">
 <div class="row">
 <div class="col">
 <form action="/admin/login" method="post">
 <div class="form-group">
-    <label for="usuario">Usuario</label>
+    <label for="usuario" style="font-weight: bold;margin: 0;">Usuario</label>
     <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
     name="usuario">
 </div>
 <div class="form-group">
-<label for="password">Password</label>
+<label for="password" style="font-weight: bold;margin: 0">Password</label>
 <input type="password" class="form-control" id="password"
 name="password">
 </div>
-<button type="submit" class="btn btn-light">Enviar</button>
+<button type="submit" class="btn btn-light" style=" background: rgb(227, 223, 223); margin:20px">Enviar</button>
 </form>
 
 {{#if error}}
@@ -22,3 +32,9 @@ name="password">
 </div>
 </div>
 </div>
+
+<body style="background: url(/images/login.avif) no-repeat;
+background-size:cover; ">
+</body>
+
+   

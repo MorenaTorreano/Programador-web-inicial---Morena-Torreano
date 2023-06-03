@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function(req, res, next) {
+  var novedades = await novedadesModel.getNovedades();
+novedades = novedades.splice(0,5);
+  res.render('index', { title: 'Express' }, { novedades });
 });
 
 
@@ -18,8 +21,8 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'more.torreano@hotmail.com',
     subject: 'Contacto desde la web',
-    html: nombre + " " + apellido +  "se contacto a traves y quiere mas info a este correo: "
-    + email + ".<br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es " + telefono }
+    html: nombre + " " + apellido + " se contacto a traves y quiere mas informacion a este correo: "
+    + email + "<br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su telefono es " + telefono }
 
   var transporter = nodemailer.createTransport( {
 host: process.env.SMTP_HOST,
