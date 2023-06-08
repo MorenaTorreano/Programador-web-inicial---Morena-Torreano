@@ -1,0 +1,31 @@
+<div class="container" style="margin: 240px auto ">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4 style="font-family: 'Libre Baskerville', serif;">Modificar una novedad</h4>
+            <form method="post" action="/admin/novedades/modificar">
+                <input type="hidden" value="{{novedad.id}}" name="id">
+               Titulo <div class="form-group">
+                    <input type="text" placeholder="Titulo" value="{{novedad.titulo}}" class="form-control"
+                        name="titulo">
+                </div>
+               Subtitulo <div class="form-group">
+                    <textarea class="form-control" placeholder="Subtitulo"
+                        name="subtitulo">{{novedad.subtitulo}}</textarea>
+                </div>
+             Cuerpo <div class="form-group">
+                    <textarea placeholder="Cuerpo" name="cuerpo" class="form-control"> {{novedad.cuerpo}}</textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-light" style=" background: rgb(183, 181, 181); margin:20px">Modificar</button>
+            </form>
+    
+             {{#if error}}
+             <p class="alert alert-danger">{{message}}</p>
+             {{/if}}
+        </div>
+    </div>
+</div>
+
+<body style="background: url(/images/modificar.jpg) no-repeat;
+background-size:cover; ">
+</body>
