@@ -1,5 +1,5 @@
 <div class="container" style="margin: 100px auto; background-color: white; border-radius: 20px; width: 200vh;
-	height: 60vh;
+	height: 90vh;
 	margin: 100px auto;">
     <div class="row">
         <div class="col">
@@ -27,6 +27,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col" class="text-center">Acciones</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                     <tr> 
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-center">
                             <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary">
                                 <i class="fa fa-pencil"></i></a>

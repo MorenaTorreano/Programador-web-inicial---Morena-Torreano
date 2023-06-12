@@ -13,9 +13,12 @@
         <h2>Novedades</h2>
         <ul class="lista-novedades">
              {{#each novedades}}
-            <li ><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"> <img src="/images/MUNDO.webp"
-                        width="55px" height="50px"> {{titulo}} </a>  </li>
-             {{/each}}
+            <li> 
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"> 
+                    <img src="{{imagen}}" width="70"> {{titulo}}
+                    </a>
+             </li>
+             {{/each}} 
         </ul>
     </div>
      {{#each novedades}}
@@ -28,6 +31,7 @@
                 </div>
                 <div class="modal-body">
                     <h4> {{subtitulo}}</h4>
+                    <img src="{{imagen}}" width="100">
                     <p> {{cuerpo}}</p>
                 </div>
             </div>
