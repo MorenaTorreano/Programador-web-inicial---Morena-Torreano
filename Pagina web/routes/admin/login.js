@@ -28,10 +28,10 @@ var data = await usuariosModel.getUserbyUsernameAndPassword (usuario, password);
 if (data != undefined) {
   req.session.id_usuario = data.id;
   req.session.nombre = data.usuario;
-  res.redirect('/admin/novedades')
+  res.redirect('/admin/novedades');
 } else {
-  res.render('/admin/login', {
-  layout: '/admin/layout',
+  res.render('admin/login', {
+  layout: 'admin/layout',
   error: true
 })
 }
